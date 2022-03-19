@@ -1,0 +1,165 @@
+.invoice{
+    font-family: system-ui;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.invoice hr{
+    height: 3px;
+    background-color: #9d8c8c;
+    -webkit-print-color-adjust: exact !important;
+}
+.row{
+    padding: 0 10px;
+}
+/* start logo */
+.logo{
+    margin-top: 10px;
+    position: relative;
+}
+.logo .logo-pic img{
+    width: 137px;
+    height: 137px;
+}
+.logo p{
+    margin-bottom: 0px;
+}
+/* end logo */
+/* start bill-to */
+.bill-to p{
+    margin-bottom: 0px;
+}
+.bill-to b{
+    display: block;
+}
+.bill-to p{
+    margin-bottom: 0;
+}
+/* end bill-to */
+/* start table */
+.table{
+    margin-top: 20px;
+}
+.table thead {
+    box-shadow: 0 3px 3px rgb(0 0 0);
+    background-color: green;
+    color: #fff;
+    -webkit-print-color-adjust: exact;
+}
+.table tbody .logo-design{
+    background-color: #e6e6e6;
+    -webkit-print-color-adjust: exact;
+    border-radius: 10px;
+}
+.payment .amount-due{
+    -webkit-print-color-adjust: exact;
+    box-shadow: 0 3px 3px rgb(201 192 192);
+    background-color: #e6e6e6;
+    padding: 7px 0;
+    margin: 5px 0;
+}
+/* end table */
+/* start signture */
+.signture img{
+    width: 320px;
+    height: 120px;
+    margin-bottom: -10px;
+}
+.signture hr{
+    margin-bottom: 0;
+}
+/* end signture */
+
+
+@media only screen and (max-width: 576px) {
+    /* start logo */
+    .logo .row{
+        flex-direction: column;
+    }
+    .logo .row .col-6{
+        width: 100%;
+    }
+    .logo-pic, .invoice-address{
+        text-align: center !important;
+    }
+    /* end logo */
+    /* start bill-to */
+    .bill-to .row{
+        flex-direction: column;
+    }
+    .bill-to .row .col-6{
+        width: 100%;
+        text-align: center !important;
+    }
+    .bill-to .row .col-6 .row{
+        display: flex;
+        flex-direction: row !important;
+    }
+    .bill-to .row .col-6 .row .col-6{
+        width: 50% !important;
+    }
+    /* end bill-to */
+    /* start payment */
+    .payment .row{
+        flex-direction:row;
+    }
+    .payment .row .col-4{
+        width: 75%;
+    }
+    .payment .row .col-2{
+        width: 25%
+    }
+    .payment .col-6{
+        width: 100%;
+        text-align: center !important;
+    }
+    .payment .col-6 .row {
+        flex-direction:row;
+    }
+    .payment .col-6 .row .col-8{width:60%}
+    .payment .col-6 .row .col-4{width:40%}
+    /* end payment */
+    /* start signture */
+    .signture .col-6{
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .signture .col-6 p{
+        display: contents;
+    }
+    .signture .row hr{
+        max-width: 320px;
+        margin: auto;
+        margin-bottom: 3px;
+        margin-top: 5px;
+    }
+    /* end signture */
+    
+}
+@media print{
+    .bill-to{
+        margin-bottom: 15px;
+    }
+    table td p{
+        font-size:15px
+    }
+    .invoice hr{
+        height: 3px;
+        background-color: #898383;
+        margin-top: 9px;
+        margin-bottom: 9px;
+    }
+    .signture img{
+        width: 320px;
+        height: 80px;
+    }
+    .signture .sign-prag{
+        margin-top:-10px;
+        font-size: 21px;
+    }
+    .print-button{
+        display: none;
+    }
+}
